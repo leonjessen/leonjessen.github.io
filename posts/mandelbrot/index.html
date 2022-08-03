@@ -250,7 +250,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Each pixel in the final picture is a count, generate counts</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>( i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>res ){</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span>( j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>res ){</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      mb[i,j] <span class="ot">=</span> <span class="fu">Mandelbrot_count</span>(<span class="at">c =</span> <span class="fu">complex</span>(<span class="at">r =</span> A[i], <span class="at">i =</span> B[j]), <span class="at">lim =</span> lim)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      mb[i,j] <span class="ot">&lt;-</span> <span class="fu">Mandelbrot_count</span>(<span class="at">c =</span> <span class="fu">complex</span>(<span class="at">r =</span> A[i], <span class="at">i =</span> B[j]), <span class="at">lim =</span> lim)</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  </span>
