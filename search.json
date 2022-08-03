@@ -1,16 +1,51 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "leonjessen.github.io",
+    "objectID": "posts/mandelbrot/index.html",
+    "href": "posts/mandelbrot/index.html",
+    "title": "Visualising the Mandelbrot set in R",
     "section": "",
-    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "In this brief post, we will take a look at how we can visualise the Mandelbrot set using recursion in R. The set looks like this (click the image to enlarge):\n\n\n\n\n\nThis post was inspired by this excellent Numberphile video featuring Dr. Holly Krieger. Below, we will go over the code, but skip the mathematics, as these are covered in the video."
+  },
+  {
+    "objectID": "posts/mandelbrot/index.html#functions",
+    "href": "posts/mandelbrot/index.html#functions",
+    "title": "Visualising the Mandelbrot set in R",
+    "section": "Functions",
+    "text": "Functions\nEach pixel in the final image is a count, so we need to create a function, which computes the count for a given input z and c, not how we are using recursion to solve the problem:\n\nMandelbrot_count <- function(z = complex(r = 0, i = 0), c, lim = 100, n = 0){\n  n <- n + 1\n  z <- z * z + c\n  if( abs(z) > 2 | n > lim ){\n    return(n)\n  }\n  # Recurse until return criteria are met\n  Mandelbrot_count(z = z, c = c, lim = lim, n = n)\n}\n\nNext, we need to create a function, which can compute the pixels of the final visualisation:\n\nMandelbrot_matrix <- function(res, lim){\n  A <- seq(-2, 0.5, len = res)            # Values along the complex a-axis\n  B <- seq(-1.2, 1.2, len = res)          # Values along the complex b-axis\n  mb <- matrix(0, nrow = res, ncol = res) # Prebuild mandelbrot count matrix\n  \n  # Each pixel in the final picture is a count, generate counts\n  for( i in 1:res ){\n    for( j in 1:res ){\n      mb[i,j] = Mandelbrot_count(c = complex(r = A[i], i = B[j]), lim = lim)\n    }\n  }\n  \n  # Done, return\n  return(mb)\n}"
+  },
+  {
+    "objectID": "posts/mandelbrot/index.html#computation",
+    "href": "posts/mandelbrot/index.html#computation",
+    "title": "Visualising the Mandelbrot set in R",
+    "section": "Computation",
+    "text": "Computation\nNow, we can generate the count matrix of the mandelbrot set:\n\n#  - res [Pixel resolution res x res]\n#  - lim [Bail out limit for max number of iterations]\nres <- 2048\nlim <- 128\nmb <- Mandelbrot_matrix(res = res, lim = lim)"
+  },
+  {
+    "objectID": "posts/mandelbrot/index.html#visualisation",
+    "href": "posts/mandelbrot/index.html#visualisation",
+    "title": "Visualising the Mandelbrot set in R",
+    "section": "Visualisation",
+    "text": "Visualisation\nLastly, we can generate the visualisation of the mandelbrot set:\n\n# Set colour palette\npalette <- c(\"darkblue\", \"lightblue\", \"white\", \"yellow\", \"orange\", \"black\")\ncolours <- colorRampPalette(palette)(n = lim)\n\n# Plot to png\npng_file <- paste0(\"mandelbrot_png_res_\", res, \"_lim_\", lim, \".png\")\npng(filename = png_file, width = res, height = res)\npar(pty = \"s\")\nimage(mb, col = colours, xaxt = \"n\", yaxt = \"n\")\ndev.off()\n\nDone - That’s the code, which produces the image at the beginning of this post.\nUntil next time…"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "I am tenured Associate Professor of bioinformatics at the Technical University of Denmark, where I am heading the Computational Autoimmunity Group at Section for Bioinformatics, Department of Health Technology. In addition to this position, I am also co-founder/-CEO at nordicdatalab, specialising in data science infrastructure consulting and training."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\n\n2019: Introductory education in university teaching in the engineering sciences\n2014: Doctor of Philosophy, PhD in Bioinformatics and Computational Biology. Center for Biological SCenter for Biological Sequence Analysis, Technical University of Denmark. Thesis title: “Immunoinformatics of Placental Malaria Vaccine Development”.\n2010: Master of Science in Biotech engineering. Technical University of Denmark. Thesis title: “Analysis of Malaria Proteins - The DBL5\\(\\epsilon\\) subdomain of VAR2CSA, Involved in Placental Adhesion in Pregnancy Associated Malaria”\n2008: Bachelor of Science in engineering. Technical University of Denmark. Thesis title: “Development of Immobilization of Glycosidases on Nano-beads to be used for Enzymatic Removal of Blood Group A and B on Red Blood Cells”"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "code\n\n\ndataviz\n\n\n\n\n\n\n\n\n\n\n\nAug 3, 2022\n\n\nLeon Eyrich Jessen\n\n\n\n\n\n\nNo matching items"
   }
 ]
