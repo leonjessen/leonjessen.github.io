@@ -35,11 +35,18 @@
     "text": "I am tenured Associate Professor of bioinformatics at the Technical University of Denmark, where I am heading the Computational Autoimmunity Group at Section for Bioinformatics, Department of Health Technology. In addition to this position, I am also co-founder/-CEO at nordicdatalab, specialising in data science infrastructure consulting and training."
   },
   {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "About",
+    "section": "Experience",
+    "text": "Experience\n\nSep. 2021 - Present: Associate Professor of Bioinformatics, DTU Health Tech\nFeb. 2019 - Sep. 2021: Assistant Professor of Bioinformatics, DTU Health Tech\nSep. 2017 - Feb. 2019: Postdoctoral Researcher, DTU Bioinformatics\nJan. 2016 - Sep. 2017: Senior-/Postdoctoral Researcher, Herlev and Gentofte Hospital\nApr. 2014 - Jan. 2016: Postdoctoral Researcher, Steno Diabetes Center"
+  },
+  {
     "objectID": "about.html#education",
     "href": "about.html#education",
     "title": "About",
     "section": "Education",
-    "text": "Education\n\n2019: Introductory education in university teaching in the engineering sciences\n2014: Doctor of Philosophy, PhD in Bioinformatics and Computational Biology. Center for Biological SCenter for Biological Sequence Analysis, Technical University of Denmark. Thesis title: “Immunoinformatics of Placental Malaria Vaccine Development”.\n2010: Master of Science in Biotech engineering. Technical University of Denmark. Thesis title: “Analysis of Malaria Proteins - The DBL5\\(\\epsilon\\) subdomain of VAR2CSA, Involved in Placental Adhesion in Pregnancy Associated Malaria”\n2008: Bachelor of Science in engineering. Technical University of Denmark. Thesis title: “Development of Immobilization of Glycosidases on Nano-beads to be used for Enzymatic Removal of Blood Group A and B on Red Blood Cells”"
+    "text": "Education\n\n2019: University teaching in the engineering sciences, Introductory education, LearningLab, Technical University of Denmark.\n2014: Doctor of Philosophy, PhD in Bioinformatics and Computational Biology. Center for Biological Sequence Analysis, Technical University of Denmark. Thesis title: “Immunoinformatics of Placental Malaria Vaccine Development”.\n2010: Master of Science in Biotech engineering. Technical University of Denmark. Thesis title: “Analysis of Malaria Proteins - The DBL5\\(\\epsilon\\) subdomain of VAR2CSA, Involved in Placental Adhesion in Pregnancy Associated Malaria”\n2008: Bachelor of Science in engineering. Technical University of Denmark. Thesis title: “Development of Immobilization of Glycosidases on Nano-beads to be used for Enzymatic Removal of Blood Group A and B on Red Blood Cells”"
   },
   {
     "objectID": "blog.html",
