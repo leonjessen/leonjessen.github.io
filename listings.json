@@ -2,8 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/pca/index.html",
-      "/posts/mandelbrot/index.html"
+      "/posts/mandelbrot/index.html",
+      "/posts/datascience_meets_music/index.html"
     ]
   }
 ]
